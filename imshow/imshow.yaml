@@ -1,0 +1,10 @@
+name: imshow
+labels:
+  recommended_framework: ''
+  class: 'image'
+  others: ''
+operator: towhee/imshow
+init:
+call:
+  input:
+    image: numpy.ndarray
