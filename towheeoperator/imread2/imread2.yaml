@@ -1,0 +1,11 @@
+name: imread2
+labels:
+  recommended_framework: ''
+  class: 'image'
+  others: ''
+operator: towhee/imread2
+init:
+  input: int
+call:
+  output:
+    image: numpy.ndarray
