@@ -21,7 +21,25 @@ $ python setup.py develop # or python setup.py develop
 $ git clone https://github.com/reiase/towheeoperator.git
 $ cd towheeoperator
 $ pip uninstall towheeoperator-imread towheeoperator-imshow
-$ towhee develop -i imread
+$ towhee develop -i imread # -i for installation
 $ towhee develop -i imshow
 $ towhee execute -n 100 video_cap/video_cap.yaml
 ```
+
+Examples
+--------
+
+### develop operators
+
+```shell
+$ towhee develop -d imread # -d for development
+$ towhee develop -d imshow
+$ towhee execute -n 100 video_cap/video_cap.yaml
+```
+
+### control operator behavior with hyperparameter
+
+```shell
+$ towhee execute -n 100 -Dtowheeoperator.imread.scale=0.2 video_cap/video_cap.yaml
+```
+`towheeoperator.imread.scale` is the parameter controlling image scaling in `imread`.
